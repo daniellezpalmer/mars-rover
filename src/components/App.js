@@ -1,12 +1,32 @@
 import React, {Component} from 'react';
-import '../styles/App.css';
+import stars from "../images/stars.jpg";
 import GetImageForm from './getImageForm.js'
 
 
 class App extends Component {
   render() {
+
+    let title = {
+      display:"flex",
+      justifyContent:"center",
+      fontFamily:"Open Sans Condensed",
+      // alignText:"center",
+      fontSize:35,
+      backgroundColor:"white"
+    }
+
+    let image = {
+      backgroundImage: `url(${stars})`,
+      position:"cover",
+      height: 5000,
+      fontSize: 50
+    }
+
     return (
-      <div>
+      <div style={image}>
+        <div style={title}>
+        MARS ROVER APP
+      </div>
         <GetImageForm />
       </div>
     )
